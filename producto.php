@@ -16,8 +16,8 @@ if (isset($_POST["btnRegistrar"])) {
             $sql = "UPDATE producto SET NombreProducto='$nombreProducto'
                     WHERE IdProducto = $id";
         } else {
-            $sql = "INSERT INTO venta (Fecha, NroDoc, Cliente, Ruc, IdProducto, Cantidad)
-                    VALUES ('$fecha', '$nroDoc', '$cliente', '$ruc', '$idProducto', '$cantidad')";
+            $sql = "INSERT INTO producto (NombreProducto)
+                    VALUES ('$nombreProducto')";
         }
 
         $result = mysqli_query($cnx, $sql);
